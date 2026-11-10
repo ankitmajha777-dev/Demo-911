@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Table Reservations — Roast &amp; Revel</title>
+    <meta name="description" content="Reserve a table at Roast &amp; Revel. Guaranteed seating for morning coffee, slow-brew tasting flights, and weekend artisanal pastries." />
+    <meta property="og:title" content="Table Reservations — Roast &amp; Revel" />
+    <meta property="og:description" content="Book your sanctuary table online for morning brews and sensory tastings." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Top Bar Navigation Contract -->
+    <header class="site-header">
+      <div class="container nav-row">
+        <a href="index.html" class="brand-logo" aria-label="Roast and Revel Homepage">
+          ROAST <span class="amp">&amp;</span> REVEL
+        </a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="coffee.html" class="nav-link">Our Coffee</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="reservations.html" class="nav-link active">Reservations</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-cta-wrap">
+          <a href="reservations.html" class="btn btn-primary btn-sm">Reserve Table</a>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="coffee.html" class="nav-link">Our Coffee</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="reservations.html" class="nav-link active">Reservations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div style="margin-top: 1rem;">
+          <a href="reservations.html" class="btn btn-primary" style="width: 100%;">Book Table Online</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <img src="assets/images/interior.jpg" alt="Café seating" class="page-header-bg" />
+        <div class="container page-header-content">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Reservations</span>
+          </div>
+          <h1>Table Reservations</h1>
+          <p>"Claim your morning sanctuary for coffee, conversation, and pastry."</p>
+        </div>
+      </section>
+
+      <!-- Reservation Booking Section -->
+      <section class="section">
+        <div class="container">
+          <div class="story-split" style="align-items: start;">
+            <!-- Left Column: Form & Confirmation Card -->
+            <div>
+              <div class="form-card">
+                <span class="section-kicker">Instant Table Booking</span>
+                <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem;">Reserve Your Experience</h2>
+                <p style="color: var(--color-muted); font-size: 0.9rem; margin-bottom: 2rem;">
+                  Reservations are complimentary. We hold tables for 15 minutes past your scheduled time.
+                </p>
+
+                <div id="reservation-feedback" class="form-feedback"></div>
+
+                <form id="reservation-form">
+                  <div class="form-grid form-grid-2">
+                    <div class="form-group">
+                      <label class="form-label" for="res-name">Full Name *</label>
+                      <input type="text" id="res-name" required placeholder="Elena Rostova" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="res-email">Email Address *</label>
+                      <input type="email" id="res-email" required placeholder="elena@example.com" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="res-phone">Telephone Number *</label>
+                      <input type="tel" id="res-phone" required placeholder="+1 (415) 555-0192" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="res-date">Date of Visit *</label>
+                      <input type="date" id="res-date" required class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="res-time">Seating Time *</label>
+                      <select id="res-time" required class="form-control">
+                        <option value="07:30 AM">07:30 AM — Early Morning First Light</option>
+                        <option value="08:30 AM">08:30 AM — Dawn Brew &amp; Croissants</option>
+                        <option value="10:00 AM" selected>10:00 AM — Mid-Morning Coffee Ritual</option>
+                        <option value="11:30 AM">11:30 AM — Slow Pour-Over Flight</option>
+                        <option value="01:30 PM">01:30 PM — Afternoon Espresso &amp; Dessert</option>
+                        <option value="03:30 PM">03:30 PM — Quiet Literary Hours</option>
+                        <option value="05:00 PM">05:00 PM — Evening Roasted Cacao &amp; Tonic</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="form-label" for="res-guests">Number of Guests *</label>
+                      <select id="res-guests" required class="form-control">
+                        <option value="1">1 Guest (Solo Sanctuary / Reading)</option>
+                        <option value="2" selected>2 Guests (Bistro Table)</option>
+                        <option value="3">3 Guests</option>
+                        <option value="4">4 Guests (Oak Booth)</option>
+                        <option value="5">5 Guests</option>
+                        <option value="6">6 Guests (Library Table)</option>
+                        <option value="8+">8+ Guests (Private Cupping Room)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group" style="margin-top: 1.5rem;">
+                    <label class="form-label" for="res-seating">Seating Zone Preference</label>
+                    <select id="res-seating" class="form-control">
+                      <option value="Main Barista Counter">Main Barista Counter (Watch espresso extraction)</option>
+                      <option value="Sunlit Arched Window" selected>Sunlit Arched Window (Cobblestone street view)</option>
+                      <option value="Quiet Library Nook">Quiet Library Nook (Acoustic warmth, armchairs)</option>
+                      <option value="Courtyard Garden Terrace">Courtyard Garden Terrace (Open air, fountain view)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group" style="margin-top: 1.5rem;">
+                    <label class="form-label" for="res-notes">Special Requests or Dietary Notes</label>
+                    <textarea id="res-notes" placeholder="e.g. Gluten intolerance for bakery, anniversary celebration, oat milk preference..." class="form-control"></textarea>
+                    <span class="form-help">We do our utmost to accommodate special culinary or seating requests.</span>
+                  </div>
+
+                  <div style="margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                      Confirm Table Reservation
+                    </button>
+                  </div>
+                </form>
+
+                <div id="reservation-result-card"></div>
+              </div>
+            </div>
+
+            <!-- Right Column: Policies & Information -->
+            <div>
+              <div style="background-color: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; padding: 2.25rem; margin-bottom: 2rem;">
+                <span class="card-meta">Visiting Guidelines</span>
+                <h3 style="font-size: 1.35rem; margin-bottom: 1rem;">Reservation Policies</h3>
+
+                <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; font-size: 0.9rem; color: var(--color-charcoal);">
+                  <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <span style="color: var(--color-gold); font-weight: bold;">•</span>
+                    <div>
+                      <strong>15-Minute Grace Period:</strong>
+                      <p style="color: var(--color-muted); font-size: 0.85rem;">Please notify us if delayed. After 15 minutes, unoccupied tables may be released to awaiting walk-ins.</p>
+                    </div>
+                  </li>
+                  <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <span style="color: var(--color-gold); font-weight: bold;">•</span>
+                    <div>
+                      <strong>Walk-In Availability:</strong>
+                      <p style="color: var(--color-muted); font-size: 0.85rem;">We always keep 30% of our café tables available for spontaneous walk-in guests throughout the day.</p>
+                    </div>
+                  </li>
+                  <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                    <span style="color: var(--color-gold); font-weight: bold;">•</span>
+                    <div>
+                      <strong>Private Cupping &amp; Groups (8+):</strong>
+                      <p style="color: var(--color-muted); font-size: 0.85rem;">For private tasting events or roastery tours, email us at <a href="mailto:events@roastandrevel.coffee" style="color: var(--color-coffee); text-decoration: underline;">events@roastandrevel.coffee</a>.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="background-color: var(--color-cream); border: 1px solid var(--color-border); border-radius: 8px; padding: 2.25rem;">
+                <span class="card-meta">Welcome Hospitality</span>
+                <h3 style="font-size: 1.35rem; margin-bottom: 0.75rem;">Complimentary Welcome Cup</h3>
+                <p style="font-size: 0.875rem; color: var(--color-muted); line-height: 1.6; margin-bottom: 1.25rem;">
+                  Every confirmed reservation is greeted with a 3oz demitasse of our current roaster's pick single-origin filter brew, poured table-side.
+                </p>
+                <div style="border-radius: 4px; overflow: hidden; height: 180px;">
+                  <img src="assets/images/pourover.jpg" alt="Welcome pour-over service" style="width: 100%; height: 100%; object-fit: cover;" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Master Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="brand-logo" style="color: #FFFFFF; margin-bottom: 1rem;">
+              ROAST <span class="amp">&amp;</span> REVEL
+            </h4>
+            <p>
+              "Where Every Cup Tells a Story."<br />
+              Artisanal single-origin roastery, espresso bar, and bakery dedicated to intentional hospitality and sensory excellence.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Seasonal Menu</a></li>
+              <li><a href="coffee.html">Our Coffee &amp; Terroir</a></li>
+              <li><a href="about.html">About &amp; Philosophy</a></li>
+              <li><a href="gallery.html">Visual Gallery</a></li>
+              <li><a href="reservations.html">Book Reservations</a></li>
+              <li><a href="contact.html">Contact &amp; Location</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Café Hours</h4>
+            <p style="margin-bottom: 0.5rem;"><strong style="color: #FFFFFF;">Mon — Fri:</strong> 06:30 — 19:00</p>
+            <p style="margin-bottom: 0.5rem;"><strong style="color: #FFFFFF;">Sat — Sun:</strong> 07:30 — 20:00</p>
+          </div>
+          <div class="footer-col">
+            <h4>The Roastery Journal</h4>
+            <p>Receive seasonal harvest dispatches and brewing guides.</p>
+            <form class="newsletter-form" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+              <input type="email" placeholder="Your email address" required class="form-control" style="background-color: rgba(255,255,255,0.08); border-color: rgba(247,241,232,0.2); color: #FFFFFF; font-size: 0.85rem;" />
+              <button type="submit" class="btn btn-gold btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Roast &amp; Revel Coffee Co. All rights reserved.</div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="contact.html">Visit Café</a>
+            <a href="reservations.html">Table Booking</a>
+            <a href="404.html">404 Page</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Scroll back to top">↑</button>
+  </body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visual Gallery — Roast &amp; Revel</title>
+    <meta name="description" content="Explore photographic moments from Roast &amp; Revel. European café ambiance, small-batch coffee roasting, precise latte art, and freshly laminated pastries." />
+    <meta property="og:title" content="Visual Gallery — Roast &amp; Revel" />
+    <meta property="og:description" content="Photographic journey through our café sanctuary, roastery, and bakery." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Top Bar Navigation Contract -->
+    <header class="site-header">
+      <div class="container nav-row">
+        <a href="index.html" class="brand-logo" aria-label="Roast and Revel Homepage">
+          ROAST <span class="amp">&amp;</span> REVEL
+        </a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link">Menu</a>
+          <a href="coffee.html" class="nav-link">Our Coffee</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="gallery.html" class="nav-link active">Gallery</a>
+          <a href="reservations.html" class="nav-link">Reservations</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-cta-wrap">
+          <a href="reservations.html" class="btn btn-primary btn-sm">Reserve Table</a>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="coffee.html" class="nav-link">Our Coffee</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="reservations.html" class="nav-link">Reservations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div style="margin-top: 1rem;">
+          <a href="reservations.html" class="btn btn-primary" style="width: 100%;">Book Table Online</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <img src="assets/images/interior.jpg" alt="Café interior" class="page-header-bg" />
+        <div class="container page-header-content">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Gallery</span>
+          </div>
+          <h1>Visual Gallery</h1>
+          <p>"Capturing the quiet elegance of our roastery, bar, and bakery."</p>
+        </div>
+      </section>
+
+      <!-- Gallery Grid & Filter Section -->
+      <section class="section">
+        <div class="container">
+          <!-- Gallery Category Filter Tabs -->
+          <div class="filter-tabs gallery-filters">
+            <button type="button" class="filter-btn active" data-gallery-filter="all">All Photographs</button>
+            <button type="button" class="filter-btn" data-gallery-filter="ambiance">Ambiance &amp; Space</button>
+            <button type="button" class="filter-btn" data-gallery-filter="craft">Roasting Craft</button>
+            <button type="button" class="filter-btn" data-gallery-filter="extraction">Espresso &amp; Pour-Over</button>
+            <button type="button" class="filter-btn" data-gallery-filter="bakery">Artisanal Bakery</button>
+          </div>
+
+          <!-- Gallery Items -->
+          <div class="gallery-grid" id="main-gallery-grid">
+            <!-- Item 1: Ambiance -->
+            <div class="gallery-item" data-gallery-cat="ambiance" data-title="Architectural Walnut Bar &amp; Morning Light" data-cat-label="Ambiance &amp; Interior">
+              <img src="assets/images/interior.jpg" alt="European café interior with warm wood and marble" />
+              <div class="gallery-item-overlay">
+                <h4>Architectural Walnut Bar</h4>
+                <p>Ambiance &amp; Interior</p>
+              </div>
+            </div>
+
+            <!-- Item 2: Extraction / Latte Art -->
+            <div class="gallery-item" data-gallery-cat="extraction" data-title="Master Barista Pouring Microfoam Tulip" data-cat-label="Extraction &amp; Latte Art">
+              <img src="assets/images/hero.jpg" alt="Barista pouring artisanal latte art" />
+              <div class="gallery-item-overlay">
+                <h4>Microfoam Tulip Pour</h4>
+                <p>Extraction &amp; Latte Art</p>
+              </div>
+            </div>
+
+            <!-- Item 3: Craft / Roasting -->
+            <div class="gallery-item" data-gallery-cat="craft" data-title="Cooling Freshly Roasted Ethiopian Beans" data-cat-label="The Roasting Craft">
+              <img src="assets/images/beans.jpg" alt="Artisanal brass roasting tray with coffee beans" />
+              <div class="gallery-item-overlay">
+                <h4>Vintage Cooling Tray</h4>
+                <p>The Roasting Craft</p>
+              </div>
+            </div>
+
+            <!-- Item 4: Slow Brew Extraction -->
+            <div class="gallery-item" data-gallery-cat="extraction" data-title="Precision V60 Pour-Over Blooming Ceremony" data-cat-label="Extraction &amp; Slow Brew">
+              <img src="assets/images/pourover.jpg" alt="Hand pour-over coffee brewing in V60 dripper" />
+              <div class="gallery-item-overlay">
+                <h4>V60 Blooming Ceremony</h4>
+                <p>Extraction &amp; Slow Brew</p>
+              </div>
+            </div>
+
+            <!-- Item 5: Bakery -->
+            <div class="gallery-item" data-gallery-cat="bakery" data-title="Flaky French Butter Croissants &amp; Pain au Chocolat" data-cat-label="Artisanal Viennoiserie">
+              <img src="assets/images/bakery.jpg" alt="Golden baked croissants on marble counter" />
+              <div class="gallery-item-overlay">
+                <h4>Morning Viennoiserie</h4>
+                <p>Artisanal Viennoiserie</p>
+              </div>
+            </div>
+
+            <!-- Item 6: Ambiance / Seating -->
+            <div class="gallery-item" data-gallery-cat="ambiance" data-title="Carrara Marble Bistro Tables &amp; Brass Pendants" data-cat-label="Ambiance &amp; Interior">
+              <img src="assets/images/interior.jpg" alt="Marble bistro tables by arched windows" />
+              <div class="gallery-item-overlay">
+                <h4>Carrara Marble Tables</h4>
+                <p>Ambiance &amp; Interior</p>
+              </div>
+            </div>
+
+            <!-- Item 7: Craft / Raw Sacks -->
+            <div class="gallery-item" data-gallery-cat="craft" data-title="Single-Origin Burlap Sacks from Huila &amp; Yirgacheffe" data-cat-label="The Roasting Craft">
+              <img src="assets/images/beans.jpg" alt="Single-origin coffee sacks from Colombia and Ethiopia" />
+              <div class="gallery-item-overlay">
+                <h4>Direct-Trade Micro-Lots</h4>
+                <p>The Roasting Craft</p>
+              </div>
+            </div>
+
+            <!-- Item 8: Extraction / Cortado -->
+            <div class="gallery-item" data-gallery-cat="extraction" data-title="Single-Origin Espresso Extraction at 9 Bars" data-cat-label="Extraction &amp; Espresso">
+              <img src="assets/images/hero.jpg" alt="Espresso extraction with golden crema" />
+              <div class="gallery-item-overlay">
+                <h4>Tiger-Stripe Crema</h4>
+                <p>Extraction &amp; Espresso</p>
+              </div>
+            </div>
+
+            <!-- Item 9: Slow Brew / Chemex -->
+            <div class="gallery-item" data-gallery-cat="extraction" data-title="Gooseneck Kettle Precision Water Flow" data-cat-label="Extraction &amp; Slow Brew">
+              <img src="assets/images/pourover.jpg" alt="Brass gooseneck kettle streaming water into dripper" />
+              <div class="gallery-item-overlay">
+                <h4>Gooseneck Water Flow</h4>
+                <p>Extraction &amp; Slow Brew</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table Reservation CTA Banner -->
+      <section style="background-color: var(--color-espresso); color: var(--color-cream); padding: 4.5rem 0; text-align: center;">
+        <div class="container-narrow">
+          <span class="section-kicker" style="color: var(--color-gold);">Experience The Space</span>
+          <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 1rem;">Join Us in Our Café Sanctuary</h2>
+          <p style="color: rgba(247, 241, 232, 0.8); margin-bottom: 2rem;">
+            Whether for morning reflection, quiet reading, or tasting single-origin micro-lots, we invite you to take a seat.
+          </p>
+          <a href="reservations.html" class="btn btn-gold">Reserve Your Table</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="modal-overlay" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Enlarged gallery photo viewer">
+      <div class="modal-content" style="max-width: 900px; padding: 1.5rem; background-color: var(--color-charcoal); border-color: rgba(182, 154, 101, 0.4); color: var(--color-cream);">
+        <button type="button" class="modal-close" style="color: var(--color-cream); font-size: 2rem; top: 0.75rem; right: 0.75rem;" aria-label="Close photo">&times;</button>
+        
+        <div style="position: relative; width: 100%; height: 500px; max-height: 65vh; background-color: #0B0A09; border-radius: 4px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+          <img src="" alt="Gallery enlarged" class="lightbox-image" style="width: 100%; height: 100%; object-fit: contain;" />
+          
+          <button type="button" class="lightbox-prev" aria-label="Previous image" style="position: absolute; left: 1rem; background: rgba(23, 21, 19, 0.7); border: 1px solid rgba(182,154,101,0.4); color: #FFF; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">&#10094;</button>
+          <button type="button" class="lightbox-next" aria-label="Next image" style="position: absolute; right: 1rem; background: rgba(23, 21, 19, 0.7); border: 1px solid rgba(182,154,101,0.4); color: #FFF; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">&#10095;</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(247, 241, 232, 0.1);">
+          <div>
+            <h4 class="lightbox-caption" style="color: #FFFFFF; font-size: 1.2rem; font-family: var(--font-serif);">Caption</h4>
+            <span class="lightbox-category" style="color: var(--color-gold); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">Category</span>
+          </div>
+          <span style="font-size: 0.75rem; color: rgba(247, 241, 232, 0.5);">Use arrow keys to navigate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="brand-logo" style="color: #FFFFFF; margin-bottom: 1rem;">
+              ROAST <span class="amp">&amp;</span> REVEL
+            </h4>
+            <p>
+              "Where Every Cup Tells a Story."<br />
+              Artisanal single-origin roastery, espresso bar, and bakery dedicated to intentional hospitality and sensory excellence.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Seasonal Menu</a></li>
+              <li><a href="coffee.html">Our Coffee &amp; Terroir</a></li>
+              <li><a href="about.html">About &amp; Philosophy</a></li>
+              <li><a href="gallery.html">Visual Gallery</a></li>
+              <li><a href="reservations.html">Book Reservations</a></li>
+              <li><a href="contact.html">Contact &amp; Location</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Café Hours</h4>
+            <p style="margin-bottom: 0.5rem;"><strong style="color: #FFFFFF;">Mon — Fri:</strong> 06:30 — 19:00</p>
+            <p style="margin-bottom: 0.5rem;"><strong style="color: #FFFFFF;">Sat — Sun:</strong> 07:30 — 20:00</p>
+          </div>
+          <div class="footer-col">
+            <h4>The Roastery Journal</h4>
+            <p>Receive seasonal harvest dispatches and brewing guides.</p>
+            <form class="newsletter-form" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+              <input type="email" placeholder="Your email address" required class="form-control" style="background-color: rgba(255,255,255,0.08); border-color: rgba(247,241,232,0.2); color: #FFFFFF; font-size: 0.85rem;" />
+              <button type="submit" class="btn btn-gold btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Roast &amp; Revel Coffee Co. All rights reserved.</div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="contact.html">Visit Café</a>
+            <a href="reservations.html">Table Booking</a>
+            <a href="404.html">404 Page</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Scroll back to top">↑</button>
+  </body>
+</html>

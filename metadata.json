@@ -1,0 +1,6 @@
+{
+  "name": "Roast & Revel - Premium Classic Coffee Shop",
+  "description": "A luxury editorial coffee shop web experience for Roast & Revel featuring multi-page architecture, artisanal roastery showcase, seasonal menu, table reservations, and coffee origins.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

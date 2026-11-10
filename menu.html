@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seasonal Menu — Roast &amp; Revel</title>
+    <meta name="description" content="Explore the Roast &amp; Revel menu. Single-origin espresso, V60 slow brews, Kyoto cold drip, ceremonial matcha, and artisanal French bakery items baked fresh daily." />
+    <meta property="og:title" content="Seasonal Menu — Roast &amp; Revel" />
+    <meta property="og:description" content="Precision espresso, single-origin slow drip, signature creations, and freshly laminated pastries." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+  </head>
+  <body>
+    <!-- Top Bar Navigation Contract -->
+    <header class="site-header">
+      <div class="container nav-row">
+        <a href="index.html" class="brand-logo" aria-label="Roast and Revel Homepage">
+          ROAST <span class="amp">&amp;</span> REVEL
+        </a>
+
+        <nav class="nav-links" aria-label="Primary Navigation">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="menu.html" class="nav-link active">Menu</a>
+          <a href="coffee.html" class="nav-link">Our Coffee</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="reservations.html" class="nav-link">Reservations</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-cta-wrap">
+          <a href="reservations.html" class="btn btn-primary btn-sm">Reserve Table</a>
+          <button class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div class="mobile-drawer" id="mobileDrawer">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="coffee.html" class="nav-link">Our Coffee</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="reservations.html" class="nav-link">Reservations</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <div style="margin-top: 1rem;">
+          <a href="reservations.html" class="btn btn-primary" style="width: 100%;">Book Table Online</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Page Header -->
+      <section class="page-header">
+        <img src="assets/images/hero.jpg" alt="Coffee preparation" class="page-header-bg" />
+        <div class="container page-header-content">
+          <div class="breadcrumb">
+            <a href="index.html">Home</a>
+            <span>/</span>
+            <span>Menu</span>
+          </div>
+          <h1>Seasonal Menu</h1>
+          <p>"Crafted with precision, unhurried patience, and culinary reverence."</p>
+        </div>
+      </section>
+
+      <!-- Menu Section -->
+      <section class="section">
+        <div class="container">
+          <!-- Interactive Filter Tabs -->
+          <div class="filter-tabs">
+            <button type="button" class="filter-btn active" data-filter="all">All Offerings</button>
+            <button type="button" class="filter-btn" data-filter="classics">Espresso &amp; Classics</button>
+            <button type="button" class="filter-btn" data-filter="slowbrew">Slow Brew Bar</button>
+            <button type="button" class="filter-btn" data-filter="signature">Signature Creations</button>
+            <button type="button" class="filter-btn" data-filter="cold">Cold Brew &amp; Refreshers</button>
+            <button type="button" class="filter-btn" data-filter="tea">Teas &amp; Botanicals</button>
+            <button type="button" class="filter-btn" data-filter="bakery">Artisanal Bakery</button>
+          </div>
+
+          <!-- Note on Milk & Customization -->
+          <div style="background-color: var(--color-cream); border: 1px solid var(--color-border); border-radius: 6px; padding: 1rem 1.5rem; margin-bottom: 3.5rem; text-align: center; font-size: 0.85rem; color: var(--color-espresso);">
+            <strong>Milk Selections:</strong> Certified Organic Guernsey Whole Milk · Barista Oat (+ $0.75) · House Almond-Macadamia (+ $0.85) · Lactose-Free
+          </div>
+
+          <!-- Section 1: Espresso & Classics -->
+          <div class="menu-category-section" data-category="classics">
+            <div class="menu-category-header">
+              <h3>Espresso &amp; Milk Classics</h3>
+              <span>Extracted at 9 bars on custom Synesso MVP Hydra</span>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item" data-menu-item 
+                   data-title="Single-Origin Espresso" 
+                   data-desc="Rotating single-origin lot pulled into heated demitasse. Rich crema, vibrant acidity, and lingering cocoa." 
+                   data-price="$4.25" 
+                   data-origin="Colombia Huila — Pink Bourbon" 
+                   data-notes="Blood orange, caramel fudge, stone fruit"
+                   data-brew="1:2 ratio, 18g in / 36g out, 27 seconds">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Single-Origin Espresso <span class="menu-item-tag">Roaster Pick</span>
+                  </div>
+                  <p class="menu-item-desc">Rotating micro-lot pulled into heated demitasse. Rich crema, vibrant acidity.</p>
+                </div>
+                <div class="menu-item-price">$4.25</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Double Ristretto Americano" 
+                   data-desc="Restricted double shot poured over filtered 92°C mineral water. Clean, aromatic, and bold." 
+                   data-price="$4.50" 
+                   data-origin="Revel Espresso Blend (Ethiopia &amp; Guatemala)" 
+                   data-notes="Dark chocolate, roasted pecan, dried cherry"
+                   data-brew="Double Ristretto + 6oz mineral water">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Double Ristretto Americano</div>
+                  <p class="menu-item-desc">Restricted double shot over filtered 92°C mineral water. Clean, aromatic.</p>
+                </div>
+                <div class="menu-item-price">$4.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Artisanal Cortado" 
+                   data-desc="Equal parts espresso and lightly steamed Guernsey milk served in a faceted Gibraltar glass." 
+                   data-price="$4.75" 
+                   data-origin="Guatemala Antigua Los Volcanes" 
+                   data-notes="Honey graham, milk chocolate, orange zest"
+                   data-brew="1:1 ratio, 2oz espresso + 2oz silky microfoam">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Artisanal Cortado</div>
+                  <p class="menu-item-desc">Equal parts espresso and lightly steamed Guernsey milk in a Gibraltar glass.</p>
+                </div>
+                <div class="menu-item-price">$4.75</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Classic Cappuccino" 
+                   data-desc="Rich espresso shot cushioned under 1.5cm of dense, glossy microfoam with cocoa dusting." 
+                   data-price="$5.00" 
+                   data-origin="Revel Signature Roast" 
+                   data-notes="Hazelnut praline, sweet cream, toasted malt"
+                   data-brew="6oz ceramic cup, traditional Italian proportion">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Classic Cappuccino</div>
+                  <p class="menu-item-desc">Rich espresso cushioned under 1.5cm of dense, glossy microfoam.</p>
+                </div>
+                <div class="menu-item-price">$5.00</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Velvet Flat White" 
+                   data-desc="Double ristretto shot gently blended with micro-textured milk for an exceptionally smooth texture." 
+                   data-price="$5.25" 
+                   data-origin="Colombia Huila Geisha blend" 
+                   data-notes="Brown sugar, soft jasmine, butterscotch"
+                   data-brew="5oz ceramic vessel, thin velvety microfoam">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Velvet Flat White <span class="menu-item-tag">Patron Favorite</span>
+                  </div>
+                  <p class="menu-item-desc">Double ristretto gently blended with micro-textured milk for an ultra-smooth finish.</p>
+                </div>
+                <div class="menu-item-price">$5.25</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Café Latte" 
+                   data-desc="Espresso combined with silky steamed milk and delicate free-pour latte art." 
+                   data-price="$5.50" 
+                   data-origin="Revel House Roast" 
+                   data-notes="Vanilla bean, milk chocolate, toasted oats"
+                   data-brew="8oz or 12oz ceramic cup, silky foam cap">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Café Latte</div>
+                  <p class="menu-item-desc">Espresso combined with silky steamed milk and delicate free-pour latte art.</p>
+                </div>
+                <div class="menu-item-price">$5.50</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 2: Slow Brew Bar -->
+          <div class="menu-category-section" data-category="slowbrew" style="margin-top: 3.5rem;">
+            <div class="menu-category-header">
+              <h3>Slow Brew Pour-Over Bar</h3>
+              <span>Manual hand-brews celebrating micro-terroir</span>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item" data-menu-item 
+                   data-title="Ethiopia Yirgacheffe G1 (V60)" 
+                   data-desc="Washed heirloom beans from 2,100m. Exceptionally clean, floral, and vibrant." 
+                   data-price="$6.50" 
+                   data-origin="Gedeo Zone, Yirgacheffe, Ethiopia" 
+                   data-notes="Jasmine blossom, bergamot, lemon curd, peach"
+                   data-brew="Hario V60 ceramic, 15g:250g ratio, 3m 15s extraction">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Ethiopia Yirgacheffe G1 (V60) <span class="menu-item-tag">Top Origin</span>
+                  </div>
+                  <p class="menu-item-desc">Washed heirloom from 2,100m. Exceptionally clean, floral, and vibrant cup.</p>
+                </div>
+                <div class="menu-item-price">$6.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Colombia Huila Geisha Reserve (V60)" 
+                   data-desc="Rare Geisha varietal with delicate tea-like body, tropical fruit aromatics, and honeysuckle sweetness." 
+                   data-price="$7.50" 
+                   data-origin="San Agustin, Huila, Colombia (1,950m)" 
+                   data-notes="Mango, lychee, white honey, floral chamomile"
+                   data-brew="Origami dripper, Kalita wave paper, 91°C water">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Colombia Huila Geisha Reserve</div>
+                  <p class="menu-item-desc">Rare Geisha varietal with delicate tea-like body and exotic honeysuckle sweetness.</p>
+                </div>
+                <div class="menu-item-price">$7.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Chemex Reserve (Serves Two)" 
+                   data-desc="Shared pour-over service prepared in an hourglass glass Chemex with bonded specialty filters." 
+                   data-price="$11.00" 
+                   data-origin="Guatemala Antigua Los Volcanes" 
+                   data-notes="Red currant, milk chocolate, roasted macadamia"
+                   data-brew="30g:500g shared vessel, poured tableside">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Chemex Reserve for Two</div>
+                  <p class="menu-item-desc">Shared pour-over service in an hourglass Chemex with bonded filters.</p>
+                </div>
+                <div class="menu-item-price">$11.00</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Kyoto Slow Drip Cold Brew" 
+                   data-desc="Gravity-fed Dutch cold drip apparatus, dropping water onto grounds one droplet every 3 seconds for 14 hours." 
+                   data-price="$6.75" 
+                   data-origin="Sumatra Mandheling Single Estate" 
+                   data-notes="Cedarwood, black mission fig, bourbon sweetness"
+                   data-brew="14-hour extraction, served over crystal clear hand-cut ice">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Kyoto Dutch Drip (14-Hour) <span class="menu-item-tag">Limited Daily</span>
+                  </div>
+                  <p class="menu-item-desc">Gravity cold drip dropping once every 3 seconds over 14 hours. Served on rock ice.</p>
+                </div>
+                <div class="menu-item-price">$6.75</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 3: Signature Creations -->
+          <div class="menu-category-section" data-category="signature" style="margin-top: 3.5rem;">
+            <div class="menu-category-header">
+              <h3>Signature Creations</h3>
+              <span>Bespoke house-infused culinary preparations</span>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item" data-menu-item 
+                   data-title="Smoked Bourbon Vanilla Latte" 
+                   data-desc="Espresso infused with house-cured Madagascar vanilla syrup, smoked oak mist, and steamed oat milk." 
+                   data-price="$6.50" 
+                   data-origin="Revel Espresso Roast" 
+                   data-notes="Bourbon aroma, smoked vanilla, caramelized sugar"
+                   data-brew="Double shot + house-infused vanilla + smoked mist">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Smoked Bourbon Vanilla Latte <span class="menu-item-tag">House Signature</span>
+                  </div>
+                  <p class="menu-item-desc">Espresso infused with house Madagascar vanilla, smoked oak mist, and oat milk.</p>
+                </div>
+                <div class="menu-item-price">$6.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Mocha Noir 72%" 
+                   data-desc="Double shot folded with single-estate Venezuelan dark chocolate ganache and spiced chili salt." 
+                   data-price="$6.25" 
+                   data-origin="Valrhona 72% + Colombia Espresso" 
+                   data-notes="Bittersweet cacao, roasted hazelnut, warm spice"
+                   data-brew="Steamed whole milk or oat, chocolate ganache base">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Mocha Noir 72%</div>
+                  <p class="menu-item-desc">Double shot folded with single-estate Venezuelan dark chocolate ganache.</p>
+                </div>
+                <div class="menu-item-price">$6.25</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Cardamom Orange Macchiato" 
+                   data-desc="Concentrated espresso stained with hot milk infused with cracked green cardamom and fresh flamed orange peel." 
+                   data-price="$5.25" 
+                   data-origin="Ethiopia Yirgacheffe Natural" 
+                   data-notes="Green cardamom, citrus oil, dark berries"
+                   data-brew="Traditional 3oz macchiato proportion with aromatic garnish">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Cardamom Orange Macchiato</div>
+                  <p class="menu-item-desc">Espresso stained with milk infused with green cardamom and flamed citrus peel.</p>
+                </div>
+                <div class="menu-item-price">$5.25</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Honey Lavender Spanish Latte" 
+                   data-desc="Espresso over condensed milk infused with French culinary lavender and wildflower honey." 
+                   data-price="$6.00" 
+                   data-origin="Guatemala Huehuetenango" 
+                   data-notes="Lavender blossom, sweet cream, toasted almond"
+                   data-brew="Layered Spanish style over crushed ice or steamed hot">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Honey Lavender Spanish Latte</div>
+                  <p class="menu-item-desc">Espresso over sweetened condensed milk, culinary lavender, and wildflower honey.</p>
+                </div>
+                <div class="menu-item-price">$6.00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 4: Cold Brew & Refreshers -->
+          <div class="menu-category-section" data-category="cold" style="margin-top: 3.5rem;">
+            <div class="menu-category-header">
+              <h3>Cold Brew &amp; Chilled Drinks</h3>
+              <span>Steeped for 18 hours or charged with nitrogen</span>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item" data-menu-item 
+                   data-title="Nitro Reserve Cold Brew" 
+                   data-desc="Charged with food-grade nitrogen on tap. Cascading velvet head, naturally sweet without milk." 
+                   data-price="$6.00" 
+                   data-origin="Colombia Huila Single-Origin" 
+                   data-notes="Dark chocolate, toasted walnut, stout-like sweetness"
+                   data-brew="Served chilled straight from the tap, no ice">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Nitro Reserve Cold Brew <span class="menu-item-tag">On Tap</span>
+                  </div>
+                  <p class="menu-item-desc">Charged with nitrogen on tap. Cascading velvet head and stout-like sweetness.</p>
+                </div>
+                <div class="menu-item-price">$6.00</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Espresso Tonic Botanique" 
+                   data-desc="Double shot of Ethiopia chilled and poured over Fever-Tree Mediterranean tonic water with rosemary." 
+                   data-price="$5.75" 
+                   data-origin="Ethiopia Yirgacheffe Washed" 
+                   data-notes="Quinine citrus, elderflower, bright berries"
+                   data-brew="Layered over clear ice and fresh rosemary sprig">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Espresso Tonic Botanique</div>
+                  <p class="menu-item-desc">Chilled espresso poured over artisanal Mediterranean tonic and rosemary.</p>
+                </div>
+                <div class="menu-item-price">$5.75</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Cascara Sparkling Tea" 
+                   data-desc="Sun-dried organic coffee cherry husks brewed into a sparkling refresher with honey and lime." 
+                   data-price="$5.25" 
+                   data-origin="Finca Las Lajas, Costa Rica" 
+                   data-notes="Rose hip, dried hibiscus, tamarind, honey"
+                   data-brew="Low-caffeine botanical infusion, carbonated">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Cascara Sparkling Tea</div>
+                  <p class="menu-item-desc">Sun-dried coffee cherry husks brewed into a sparkling refresher with honey.</p>
+                </div>
+                <div class="menu-item-price">$5.25</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Iced Maple Oat Cortado" 
+                   data-desc="Double shot shaken over Japanese crystal ice with organic Vermont maple syrup and oat milk." 
+                   data-price="$5.50" 
+                   data-origin="Sumatra Mandheling" 
+                   data-notes="Maple bark, dark cacao, toasted oats"
+                   data-brew="Cocktail-shaken and double-strained over rock ice">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Iced Maple Oat Cortado</div>
+                  <p class="menu-item-desc">Shaken over crystal ice with pure Vermont maple syrup and oat milk.</p>
+                </div>
+                <div class="menu-item-price">$5.50</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 5: Teas & Botanicals -->
+          <div class="menu-category-section" data-category="tea" style="margin-top: 3.5rem;">
+            <div class="menu-category-header">
+              <h3>Teas &amp; Botanicals</h3>
+              <span>Single-estate loose leaf teas and ceremonial grade matcha</span>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item" data-menu-item 
+                   data-title="Ceremonial Uji Matcha Latte" 
+                   data-desc="First-harvest green tea powder from Uji, Kyoto, whisked by hand with bamboo chasen and folded with oat milk." 
+                   data-price="$6.50" 
+                   data-origin="Uji, Kyoto, Japan (Single-Estate)" 
+                   data-notes="Vibrant umami, sweet spinach, creamy texture"
+                   data-brew="80°C whisked infusion with velvety microfoam">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Ceremonial Uji Matcha Latte <span class="menu-item-tag">Kyoto Origin</span>
+                  </div>
+                  <p class="menu-item-desc">First-harvest tea powder whisked with bamboo chasen and folded with oat milk.</p>
+                </div>
+                <div class="menu-item-price">$6.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Earl Grey Supreme" 
+                   data-desc="Whole leaf Ceylon and Assam black teas infused with natural Calabrian bergamot oil and blue cornflowers." 
+                   data-price="$5.00" 
+                   data-origin="Dimbula, Sri Lanka" 
+                   data-notes="Citrus bergamot, malt, honeyed amber"
+                   data-brew="Steeped 4 minutes in fine bone china teapot">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Earl Grey Supreme</div>
+                  <p class="menu-item-desc">Whole leaf Ceylon infused with natural Calabrian bergamot oil.</p>
+                </div>
+                <div class="menu-item-price">$5.00</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Jasmine Silver Needle" 
+                   data-desc="Imperial white tea buds scent-layered six consecutive times with fresh jasmine blossoms." 
+                   data-price="$5.50" 
+                   data-origin="Fujian, China" 
+                   data-notes="Sweet nectar, fresh jasmine, melon sweetness"
+                   data-brew="Delicate 75°C infusion for 3 minutes">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Jasmine Silver Needle</div>
+                  <p class="menu-item-desc">Imperial white tea buds scent-layered six times with fresh jasmine blossoms.</p>
+                </div>
+                <div class="menu-item-price">$5.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Chamomile Citrus Tisane" 
+                   data-desc="Whole Egyptian chamomile blossoms blended with dried Valencia orange peel and mint." 
+                   data-price="$5.00" 
+                   data-origin="Nile River Delta, Egypt" 
+                   data-notes="Golden apple, honey, gentle spearmint"
+                   data-brew="Naturally caffeine-free herbal infusion">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Chamomile Citrus Tisane</div>
+                  <p class="menu-item-desc">Whole Egyptian blossoms with dried Valencia orange peel and wild mint.</p>
+                </div>
+                <div class="menu-item-price">$5.00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section 6: Artisanal Bakery -->
+          <div class="menu-category-section" data-category="bakery" style="margin-top: 3.5rem;">
+            <div class="menu-category-header">
+              <h3>Artisanal Bakery &amp; Viennoiserie</h3>
+              <span>Baked fresh every morning using French Normandy AOP butter</span>
+            </div>
+            <div class="menu-list">
+              <div class="menu-item" data-menu-item 
+                   data-title="Normandy Butter Croissant" 
+                   data-desc="Traditional 72-hour fermented pastry laminated with 84% butterfat Normandy butter. Golden, airy, and shatteringly crisp." 
+                   data-price="$4.50" 
+                   data-origin="Lescure AOP Butter &amp; French T55 Flour" 
+                   data-notes="Toasted hazelnut, caramelized butter, delicate crumb"
+                   data-brew="Baked twice daily at 06:00 and 11:30">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">
+                    Normandy Butter Croissant <span class="menu-item-tag">Daily Dawn Bake</span>
+                  </div>
+                  <p class="menu-item-desc">72-hour fermented pastry laminated with 84% butterfat Normandy butter.</p>
+                </div>
+                <div class="menu-item-price">$4.50</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Valrhona Pain au Chocolat" 
+                   data-desc="Buttery laminated viennoiserie embracing double batons of dark French 64% Valrhona Guanaja chocolate." 
+                   data-price="$5.00" 
+                   data-origin="Valrhona Chocolate &amp; French Butter" 
+                   data-notes="Dark chocolate, flaky golden crust, honeycomb crumb"
+                   data-brew="Best paired with our Single-Origin Espresso">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Valrhona Pain au Chocolat</div>
+                  <p class="menu-item-desc">Laminated viennoiserie embracing double batons of 64% dark French chocolate.</p>
+                </div>
+                <div class="menu-item-price">$5.00</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Cardamom Morning Bun" 
+                   data-desc="Croissant dough rolled with freshly ground green cardamom, cinnamon sugar, and orange zest." 
+                   data-price="$4.75" 
+                   data-origin="Scandinavian Baking Tradition" 
+                   data-notes="Spiced cardamom, caramelized sugar crust, citrus"
+                   data-brew="Pairs sublimely with our Velvet Flat White">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Cardamom Morning Bun</div>
+                  <p class="menu-item-desc">Croissant dough rolled with freshly ground cardamom, sugar, and orange zest.</p>
+                </div>
+                <div class="menu-item-price">$4.75</div>
+              </div>
+
+              <div class="menu-item" data-menu-item 
+                   data-title="Espresso Basque Cheesecake" 
+                   data-desc="Caramelized crust burnt Basque cheesecake infused with our single-origin Colombian espresso reduction." 
+                   data-price="$7.00" 
+                   data-origin="San Sebastian Recipe + Revel Espresso" 
+                   data-notes="Custard interior, caramelized top, rich espresso finish"
+                   data-brew="Served chilled with flaked sea salt">
+                <div class="menu-item-info">
+                  <div class="menu-item-title">Espresso Basque Cheesecake</div>
+                  <p class="menu-item-desc">Caramelized crust burnt cheesecake infused with single-origin espresso reduction.</p>
+                </div>
+                <div class="menu-item-price">$7.00</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reservation Callout -->
+      <section style="background-color: var(--color-espresso); color: var(--color-cream); padding: 4.5rem 0; text-align: center;">
+        <div class="container-narrow">
+          <span class="section-kicker" style="color: var(--color-gold);">Table Service</span>
+          <h2 style="color: #FFFFFF; font-size: 2.2rem; margin-bottom: 1rem;">Experience Our Slow Brew Bar in Person</h2>
+          <p style="color: rgba(247, 241, 232, 0.8); margin-bottom: 2rem;">
+            Reserve a table in advance for morning tastings, cupping sessions, or weekend gatherings.
+          </p>
+          <a href="reservations.html" class="btn btn-gold">Make a Reservation</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Detail Modal -->
+    <div class="modal-overlay" id="menu-item-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-heading">
+      <div class="modal-content">
+        <button type="button" class="modal-close" aria-label="Close dialog">&times;</button>
+        <span style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--color-gold); font-weight: 700; display: block; margin-bottom: 0.5rem;">
+          Artisanal Offering
+        </span>
+        <h3 id="modal-title-heading" class="modal-title" style="font-size: 1.75rem; margin-bottom: 0.5rem;">Selection</h3>
+        <p class="modal-desc" style="color: var(--color-muted); margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
+          Description
+        </p>
+
+        <div style="background-color: var(--color-cream); border: 1px solid var(--color-border); border-radius: 6px; padding: 1.25rem; margin-bottom: 1.5rem;">
+          <div style="display: grid; grid-template-columns: 1fr; gap: 0.85rem; font-size: 0.875rem;">
+            <div>
+              <span style="text-transform: uppercase; font-size: 0.7rem; color: var(--color-muted); display: block;">Terroir / Origin</span>
+              <strong class="modal-origin" style="color: var(--color-espresso);">Origin detail</strong>
+            </div>
+            <div>
+              <span style="text-transform: uppercase; font-size: 0.7rem; color: var(--color-muted); display: block;">Tasting Notes</span>
+              <strong class="modal-notes" style="color: var(--color-coffee);">Flavor notes</strong>
+            </div>
+            <div>
+              <span style="text-transform: uppercase; font-size: 0.7rem; color: var(--color-muted); display: block;">Brewing Extraction</span>
+              <strong class="modal-brew" style="color: var(--color-espresso);">Extraction spec</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--color-border); padding-top: 1.25rem;">
+          <div>
+            <span style="font-size: 0.75rem; color: var(--color-muted); display: block;">Price (USD)</span>
+            <span class="modal-price" style="font-family: var(--font-mono); font-size: 1.35rem; font-weight: 700; color: var(--color-espresso);">$0.00</span>
+          </div>
+          <a href="reservations.html" class="btn btn-primary btn-sm">Reserve a Table</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Master Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h4 class="brand-logo" style="color: #FFFFFF; margin-bottom: 1rem;">
+              ROAST <span class="amp">&amp;</span> REVEL
+            </h4>
+            <p>
+              "Where Every Cup Tells a Story."<br />
+              Artisanal single-origin roastery, espresso bar, and bakery dedicated to intentional hospitality and sensory excellence.
+            </p>
+          </div>
+          <div class="footer-col">
+            <h4>Explore</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Seasonal Menu</a></li>
+              <li><a href="coffee.html">Our Coffee &amp; Terroir</a></li>
+              <li><a href="about.html">About &amp; Philosophy</a></li>
+              <li><a href="gallery.html">Visual Gallery</a></li>
+              <li><a href="reservations.html">Book Reservations</a></li>
+              <li><a href="contact.html">Contact &amp; Location</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Café Hours</h4>
+            <p style="margin-bottom: 0.5rem;"><strong style="color: #FFFFFF;">Mon — Fri:</strong> 06:30 — 19:00</p>
+            <p style="margin-bottom: 0.5rem;"><strong style="color: #FFFFFF;">Sat — Sun:</strong> 07:30 — 20:00</p>
+          </div>
+          <div class="footer-col">
+            <h4>The Roastery Journal</h4>
+            <p>Receive seasonal harvest dispatches and brewing guides.</p>
+            <form class="newsletter-form" style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+              <input type="email" placeholder="Your email address" required class="form-control" style="background-color: rgba(255,255,255,0.08); border-color: rgba(247,241,232,0.2); color: #FFFFFF; font-size: 0.85rem;" />
+              <button type="submit" class="btn btn-gold btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Roast &amp; Revel Coffee Co. All rights reserved.</div>
+          <div style="display: flex; gap: 1.5rem;">
+            <a href="contact.html">Visit Café</a>
+            <a href="reservations.html">Table Booking</a>
+            <a href="404.html">404 Page</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Scroll back to top">↑</button>
+  </body>
+</html>
